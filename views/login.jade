@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  p #{new Date()}
+  - if(err)
+    h2 #{err}
+  form(method="POST")
+    div
+      input(type="text",name="uname")
+    div
+      input(type="password",name="upass")
+    div
+      button(type="submit") 登陆

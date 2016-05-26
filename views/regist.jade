@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  p #{new Date()}
+  - if(message)
+    h1 #{message}
+  - else if(err)
+    h2 #{err}
+  form(method="POST")
+    div
+      input(type="text",name="uname")
+    div
+      input(type="password",name="upass")
+    div
+      input(type="password",name="reupass")
+    div
+      button(type="submit") 注册
